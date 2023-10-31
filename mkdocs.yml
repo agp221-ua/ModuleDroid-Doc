@@ -1,11 +1,11 @@
 site_name: My Docs
 theme:
-  name: dracula
+  name: material
   palette:
-
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -13,6 +13,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: light blue
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -31,3 +32,14 @@ extra:
 #    title: Cookie consent
 #    description: >- 
 #      Aceptar esto no sirve para nada, pero me gusta molestar a la gente con un banner flotante que te obligue a aceptar, asi que acepta :like:
+
+plugins:
+  - search
+  - mermaid2
+markdown_extensions:
+  - pymdownx.superfences:
+        # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
