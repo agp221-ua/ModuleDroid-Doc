@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: ModuleDroid
 theme:
   name: material
   palette:
@@ -26,12 +26,18 @@ extra:
       link: /en/
       lang: en
     - name: Spanish
-      link: /
+      link: /es/
       lang: es
 #  consent:
 #    title: Cookie consent
 #    description: >- 
 #      Aceptar esto no sirve para nada, pero me gusta molestar a la gente con un banner flotante que te obligue a aceptar, asi que acepta :like:
+nav:
+  - Home: home.md
+  - ModuleDroid: moduledroid.md
+  - Navigator: navigator.md
+  - Confgurator: configurator.md
+  - About: about.md
 
 plugins:
   - search
