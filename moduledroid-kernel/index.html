@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#moduledroid" class="md-skip">
+        <a href="#moduledroid-kernel" class="md-skip">
           Skip to content
         </a>
       
@@ -350,6 +350,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ModuleDroid
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -359,6 +370,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernel" class="md-nav__link">
+    Kernel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    Componentes
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componente-de-vida-de-las-activities" class="md-nav__link">
+    Componente de vida de las activities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -441,6 +505,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernel" class="md-nav__link">
+    Kernel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    Componentes
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componente-de-vida-de-las-activities" class="md-nav__link">
+    Componente de vida de las activities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -454,7 +560,27 @@
                   
 
 
-<h1 id="moduledroid">ModuleDroid</h1>
+<h1 id="moduledroid-kernel">ModuleDroid Kernel</h1>
+<h2 id="introduction">Introduction</h2>
+<p>ModuleDroid esta basado en un sistema de microkernel, es decir, se basa en ciertos
+componentes que ofrecen a diferentes modulos o plugins la posibilidad de interactuar
+con el sistema, obteniendo así una mayor abstraccion y modularidad respecto al sistema.</p>
+<h2 id="kernel">Kernel</h2>
+<p>El kernel es el nucleo del sistema, por lo que es el encargado de gestionar los modulos y plugins
+que se ejecutan en el sistema, asi como de gestionar los eventos que se producen en él.
+Internamente, el kernel esta compuesto a su vez por un conjunto de componentes que se encargan de
+gestionar los diferentes aspectos del sistema, de forma que si un modulo necesita interactuar
+con un aspecto del sistema, lo hace a traves del kernel y este se encarga de gestionar la
+interaccion con el componente correspondiente. </p>
+<h2 id="componentes">Componentes</h2>
+<p>Los componentes son los encargados de gestionar los diferentes aspectos del sistema, de forma que
+si un modulo necesita interactuar con un aspecto del sistema, lo hace a traves del kernel y este
+se encarga de gestionar la interaccion con el componente correspondiente. Los componentes
+disponibles son los siguientes:</p>
+<h3 id="componente-de-vida-de-las-activities">Componente de vida de las activities</h3>
+<p>Este componente se encarga de gestionar el ciclo de vida de las activities, de forma que siguiendo
+una estructura de suscripciones, al ocurrir un <abbr title="eventos que se producen en el ciclo de vida de una activity, como por ejemplo onCreate, onStart, onResume, onPause, onStop, onDestroy">evento de ciclo de vida</abbr> en una activity, se notifica
+a los modulos</p>
 
 
 
@@ -493,7 +619,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.tooltips"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
