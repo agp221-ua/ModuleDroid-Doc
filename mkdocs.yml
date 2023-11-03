@@ -1,6 +1,11 @@
 site_name: ModuleDroid
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - content.tooltips
+    - navigation.footer
+    - navigation.expand
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -20,32 +25,47 @@ theme:
 
   font:
     text: Roboto
-extra:
-  alternate:
-    - name: English
-      link: /en/
-      lang: en
-    - name: Spanish
-      link: /es/
-      lang: es
+#extra:
+#  alternate:
+#    - name: English
+#      link: /en/
+#      lang: en
 #  consent:
 #    title: Cookie consent
 #    description: >- 
 #      Aceptar esto no sirve para nada, pero me gusta molestar a la gente con un banner flotante que te obligue a aceptar, asi que acepta :like:
 nav:
-  - Home: home.md
-  - ModuleDroid: moduledroid.md
+  - Home: index.md
+  - Kernel:
+    - Introduction: kernel/kernel.md
+    - Components:
+      - Facade: kernel/components/facade_kernel.md
+      - Core: kernel/components/core.md
+      - Secondary Components:
+        - Current Context Manager: kernel/components/secondary components/current_context_manager.md
+        - Activity Lifecycle: kernel/components/secondary components/activity_lifecycle.md
+        - Kernel Configurator: kernel/components/secondary components/kernel_configurator.md
   - Navigator: navigator.md
-  - Confgurator: configurator.md
+  - Configurator: configurator.md
   - About: about.md
 
 plugins:
   - search
   - mermaid2
 markdown_extensions:
+  - abbr
+  - attr_list
+  - pymdownx.snippets
   - pymdownx.superfences:
         # make exceptions to highlighting of code:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid_custom
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
