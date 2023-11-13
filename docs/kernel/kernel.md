@@ -87,15 +87,33 @@ que se encargan de gestionar y facilitar el acceso los diferentes aspectos del s
 
 A continuación detallamos los componentes que componen el kernel:
 
+::cards:: cols=2
 
-[:material-guy-fawkes-mask: Facade](../components/facade_kernel/){ .md-button .mine-rounded}  
+- title: Facade
+  content: Componente encargado de gestionar las llamadas de los modulos
+  url: ../components/facade_kernel/
+  
+- title: Core
+  content: Componente encargado de la comunicacion entre los subcomponentes del kernel
+  url: ../components/core/
+  
+- title: Current Context Manager
+  content: Subcomponente encargado de gestionar el contexto actual de la aplicacion
+  url: ../components/secondary%20components/current_context_manager/  
 
-[:material-chip: Core](../components/core/){ .md-button }  
+- title: Activity Lifecycle
+  content: Subcomponente encargado de gestionar el ciclo de vida de las activities
+  url: ../components/secondary%20components/activity_lifecycle/ 
 
-[:material-nut: Current Context Manager](../components/secondary%20components/current_context_manager/){ .md-button }  
+- title: Kernel Configurator
+  content: Subcomponente encargado de gestionar la configuracion del kernel
+  url: ../components/secondary%20components/kernel_configurator/
 
-[:material-sync: Activity Lifecycle](../components/secondary%20components/activity_lifecycle/){ .md-button }  
+::/cards::
 
-[:material-wrench-cog: Kernel Configurator](../components/secondary%20components/kernel_configurator/){ .md-button }  
-
+[//]: # (- title: :material-guy-fawkes-mask: Facade)
+[//]: # (- title: :material-chip: Core)
+[//]: # (- title: :material-nut: Current Context Manager)
+[//]: # (- title: :material-sync: Activity Lifecycle)
+[//]: # (- title: :material-wrench-cog: Kernel Configurator)
 [//]: # (todo añadir los componentes del kernel)

@@ -11,6 +11,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: blue
+      accent: blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -19,6 +20,7 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: light blue
+      accent: light blue
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -71,5 +73,7 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - neoteroi.cards
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/neoteroi-mkdocs.css
