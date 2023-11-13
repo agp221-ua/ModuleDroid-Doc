@@ -41,10 +41,11 @@ nav:
     - Components:
       - Facade: kernel/components/facade_kernel.md
       - Core: kernel/components/core.md
-      - Secondary Components:
-        - Current Context Manager: kernel/components/secondary components/current_context_manager.md
-        - Activity Lifecycle: kernel/components/secondary components/activity_lifecycle.md
-        - Kernel Configurator: kernel/components/secondary components/kernel_configurator.md
+      - Subcomponents:
+        - Current Context Manager: kernel/components/subcomponents/current_context_manager.md
+        - Activity Lifecycle: kernel/components/subcomponents/activity_lifecycle.md
+        - Intent Manager: kernel/components/subcomponents/intent_manager.md
+        - Kernel Configurator: kernel/components/subcomponents/kernel_configurator.md
   - Navigator: navigator.md
   - Configurator: configurator.md
   - About: about.md
@@ -55,6 +56,7 @@ plugins:
 markdown_extensions:
   - abbr
   - attr_list
+  - md_in_html
   - pymdownx.snippets
   - pymdownx.superfences:
         # make exceptions to highlighting of code:
@@ -66,6 +68,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 extra_css:
   - stylesheets/extra.css

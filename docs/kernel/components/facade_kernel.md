@@ -21,6 +21,45 @@ evitar la necesidad de saber y depender de como funciona internamente el framewo
 
 ## Estructura
 
-El Kernel Facade esta compuesto por una serie de metodos
+```mermaid
+    flowchart TB
+        subgraph p[Plugins]
+            direction LR
+            pa(Plugin 1) 
+            pb(Plugin 2)
+            pc(Plugin N)
+        end
+            
+        subgraph f[Facade]
+            f1(Facade)
+            subgraph sf[Subfacade]
+                sf1(Subfacade 1)
+                sf2(Subfacade 2)
+                sf3(Subfacade N)
+            end
+        end
+        subgraph sc[Secondary Components]
+            direction TB
+            sc1(Subcomponent 1)
+            sc2(Subcomponent 2)
+            sc3(Subcomponent N)
+        end
+        
+        p --> f
+        f1 --> sf1
+        f1 --> sf2
+        f1 --> sf3
+        sf1 --> sc1
+        sf2 --> sc2
+        sf3 --> sc3
+        
+```
+
+!!! info   
+    Se puede observar que el Kernel Facade esta compuesto por un conjunto de subfacade, los cuales
+    se encargan de gestionar las llamadas a los componentes internos del kernel. Esta subdivision se debe
+    a que el Kernel Facade es un componente muy complejo, por lo que se ha decidido dividirlo en
+    subfacade para facilitar su comprension y mantenimiento.
+
 
 [//]: # (todo seguir con la estructura del facade)

@@ -32,7 +32,7 @@ flowchart TB
         subgraph c[CORE]
             c1(Core)
         end
-        subgraph sc[SECONDARY COMPONENTS]
+        subgraph sc[SUBCOMPONENTS]
             sc1(Current Context Manager)
             sc2(Activity Lifecycle)
             sc3(Kernel Configurator)
@@ -52,6 +52,8 @@ flowchart TB
     k ---> System
 
 ```
+
+[//]: # (todo añadir los nuevos componentes a los subcomponentes del kernel)
 
 
 ## Plugins
@@ -84,5 +86,16 @@ Como se ha comentado anteriormente, el kernel esta compuesto por un conjunto de 
 que se encargan de gestionar y facilitar el acceso los diferentes aspectos del sistema. 
 
 A continuación detallamos los componentes que componen el kernel:
+
+
+[:material-guy-fawkes-mask: Facade](../components/facade_kernel/){ .md-button .mine-rounded}  
+
+[:material-chip: Core](../components/core/){ .md-button }  
+
+[:material-nut: Current Context Manager](../components/secondary%20components/current_context_manager/){ .md-button }  
+
+[:material-sync: Activity Lifecycle](../components/secondary%20components/activity_lifecycle/){ .md-button }  
+
+[:material-wrench-cog: Kernel Configurator](../components/secondary%20components/kernel_configurator/){ .md-button }  
 
 [//]: # (todo añadir los componentes del kernel)
