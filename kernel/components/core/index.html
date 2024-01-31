@@ -246,6 +246,20 @@
 <a class="md-nav__link" href="#estructura">
     Estructura
   </a>
+<nav aria-label="Estructura" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suscripcion-de-datos">
+    Suscripcion de datos
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#obtencion-de-datos">
+    Obtencion de datos
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -349,6 +363,20 @@
 <a class="md-nav__link" href="#estructura">
     Estructura
   </a>
+<nav aria-label="Estructura" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suscripcion-de-datos">
+    Suscripcion de datos
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#obtencion-de-datos">
+    Obtencion de datos
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -370,13 +398,13 @@ Activity actual ni debería saber quien es el encargado de ello. Ahi entra en ju
 otorgar esos datos a los subcomponentes que lo necesiten, abstrayendolos de la complejidad de la obtencion de dichos datos.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>Core no conoce todos los subcomponentes del kernel, tan solo se centra en la conexion de datos entre ellos.</p>
+<p>Core no conoce los subcomponentes del kernel, tan solo se centra en la conexion de datos entre ellos.</p>
 </div>
 <h2 id="estructura">Estructura</h2>
 <pre class="mermaid"><code>    flowchart TB
         subgraph k[KERNEL]
             direction TB
-            subgraph c[SUBCOMPONENTS]
+            subgraph c[" "]
                 c1(Subcomponent 1)
                 c2(Subcomponent 2)
                 c3(Subcomponent N)
@@ -384,11 +412,25 @@ otorgar esos datos a los subcomponentes que lo necesiten, abstrayendolos de la c
             direction TB
             core(Core)
         end
-        k --&gt; System
+        c --&gt; System
         c1 &lt;-.-&gt; core
         c2 &lt;-.-&gt; core
         c3 &lt;-.-&gt; core
 </code></pre>
+<p>Para maximizar la independencia de core respecto a los subcomponentes, se hace uso de un enum, <code>CoreKeys</code>, que contiene
+las claves de los datos que se pueden obtener de otros subcomponentes. De esta forma, los subcomponentes no necesitan
+conocer la estructura de Core, tan solo necesitan conocer la clave del dato que necesitan y Core se encarga de obtenerlo
+de forma activa. Para ello, Core espera que en algun momento de la configuracion del kernel, se suscriban a cada <em>key</em> los
+subcomponentes que puedan ofrecer dicho dato. </p>
+<h3 id="suscripcion-de-datos">Suscripcion de datos</h3>
+<p>Ya mencionado anteriormente, Core no conoce los subcomponentes del kernel, por lo que emplea un sistema de suscripcion
+para que los subcomponentes puedan ofrecer sus datos a Core. Para ello, Core expone un metodo, <code>subscribe</code>, que recibe
+como parametro la clave del dato que se desea suscribir y un callback que se ejecutara cuando se solicite dicho dato.</p>
+<h3 id="obtencion-de-datos">Obtencion de datos</h3>
+<p>Para obtener los datos, Core expone un metodo, <code>get</code>, que recibe como parametro la clave del dato que se desea obtener.
+Este metodo se encarga de buscar en el mapa de suscripciones si existe algun subcomponente que ofrezca dicho dato, y en
+caso de que exista, ejecuta el callback asociado a dicho dato, recupera el dato y lo devuelve. En caso de que no exista
+una suscripcion asociada a la clave, se lanza una excepcion.</p>
 </article>
 </div>
 </div>
