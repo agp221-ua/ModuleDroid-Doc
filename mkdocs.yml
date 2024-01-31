@@ -42,10 +42,10 @@ nav:
     - Introduction: kernel/kernel.md
     - Components:
       - Facade: kernel/components/facade_kernel.md
-      - Core: kernel/components/core.md
+      - Internal Bus: kernel/components/internal_bus.md
       - Subcomponents:
-        - Current Context Manager: kernel/components/subcomponents/current_context_manager.md
         - Activity Lifecycle: kernel/components/subcomponents/activity_lifecycle.md
+        - Current Context Manager: kernel/components/subcomponents/current_context_manager.md
         - Intent Manager: kernel/components/subcomponents/intent_manager.md
         - Kernel Configurator: kernel/components/subcomponents/kernel_configurator.md
   - Navigator: navigator.md

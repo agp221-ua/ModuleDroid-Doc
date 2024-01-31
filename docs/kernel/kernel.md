@@ -29,8 +29,8 @@ flowchart TB
     subgraph k[KERNEL]
         direction TB
         f(Facade)
-        subgraph c[CORE]
-            c1(Core)
+        subgraph c[INTERNAL BUS]
+            c1(Internal Bus)
         end
         subgraph sc[SUBCOMPONENTS]
             sc1(Current Context Manager)
@@ -93,9 +93,9 @@ A continuación detallamos los componentes que componen el kernel:
   content: Componente encargado de gestionar las llamadas de los modulos
   url: ../components/facade_kernel/
   
-- title: Core
+- title: Internal Bus
   content: Componente encargado de la comunicacion entre los subcomponentes del kernel
-  url: ../components/core/
+  url: ../components/internal_bus/
   
 - title: Current Context Manager
   content: Subcomponente encargado de gestionar el contexto actual de la aplicacion
@@ -112,7 +112,7 @@ A continuación detallamos los componentes que componen el kernel:
 ::/cards::
 
 [//]: # (- title: :material-guy-fawkes-mask: Facade)
-[//]: # (- title: :material-chip: Core)
+[//]: # (- title: :material-chip: Internal Bus)
 [//]: # (- title: :material-nut: Current Context Manager)
 [//]: # (- title: :material-sync: Activity Lifecycle)
 [//]: # (- title: :material-wrench-cog: Kernel Configurator)
