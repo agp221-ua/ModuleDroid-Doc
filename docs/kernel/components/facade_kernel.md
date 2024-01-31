@@ -21,24 +21,25 @@ evitar la necesidad de saber y depender de como funciona internamente el framewo
 
 ## Estructura
 
+
 ```mermaid
     flowchart TB
-        subgraph p[Plugins]
+        subgraph p[" "]
             direction LR
             pa(Plugin 1) 
             pb(Plugin 2)
             pc(Plugin N)
         end
             
-        subgraph f[Facade]
+        subgraph f[" "]
             f1(Facade)
-            subgraph sf[Subfacade]
+            subgraph sf["  "]
                 sf1(Subfacade 1)
                 sf2(Subfacade 2)
                 sf3(Subfacade N)
             end
         end
-        subgraph sc[Secondary Components]
+        subgraph sc[" "]
             direction TB
             sc1(Subcomponent 1)
             sc2(Subcomponent 2)

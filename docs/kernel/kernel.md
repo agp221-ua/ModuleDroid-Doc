@@ -49,7 +49,7 @@ flowchart TB
     
     f <-.-> sc
     c <-.-> sc
-    k ---> System
+    sc ---> System
 
 ```
 

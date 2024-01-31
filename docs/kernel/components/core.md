@@ -18,7 +18,7 @@ Activity actual ni debería saber quien es el encargado de ello. Ahi entra en ju
 otorgar esos datos a los subcomponentes que lo necesiten, abstrayendolos de la complejidad de la obtencion de dichos datos.
 
 !!! note "Nota"
-    Core no conoce todos los subcomponentes del kernel, tan solo se centra en la conexion de datos entre ellos.
+    Core no conoce los subcomponentes del kernel, tan solo se centra en la conexion de datos entre ellos.
 
 ## Estructura
 
@@ -26,7 +26,7 @@ otorgar esos datos a los subcomponentes que lo necesiten, abstrayendolos de la c
     flowchart TB
         subgraph k[KERNEL]
             direction TB
-            subgraph c[SUBCOMPONENTS]
+            subgraph c[" "]
                 c1(Subcomponent 1)
                 c2(Subcomponent 2)
                 c3(Subcomponent N)
@@ -34,7 +34,7 @@ otorgar esos datos a los subcomponentes que lo necesiten, abstrayendolos de la c
             direction TB
             core(Core)
         end
-        k --> System
+        c --> System
         c1 <-.-> core
         c2 <-.-> core
         c3 <-.-> core
@@ -42,3 +42,27 @@ otorgar esos datos a los subcomponentes que lo necesiten, abstrayendolos de la c
 ```
 
 [//]: # (todo Especificar mejor la estructura de Core)
+
+Para maximizar la independencia de core respecto a los subcomponentes, se hace uso de un enum, `CoreKeys`, que contiene
+las claves de los datos que se pueden obtener de otros subcomponentes. De esta forma, los subcomponentes no necesitan
+conocer la estructura de Core, tan solo necesitan conocer la clave del dato que necesitan y Core se encarga de obtenerlo
+de forma activa. Para ello, Core espera que en algun momento de la configuracion del kernel, se suscriban a cada _key_ los
+subcomponentes que puedan ofrecer dicho dato. 
+
+### Suscripcion de datos
+
+Ya mencionado anteriormente, Core no conoce los subcomponentes del kernel, por lo que emplea un sistema de suscripcion
+para que los subcomponentes puedan ofrecer sus datos a Core. Para ello, Core expone un metodo, `subscribe`, que recibe
+como parametro la clave del dato que se desea suscribir y un callback que se ejecutara cuando se solicite dicho dato.
+
+[//]: # (todo Añadir ejemplo de suscripcion de datos)
+
+### Obtencion de datos
+
+Para obtener los datos, Core expone un metodo, `get`, que recibe como parametro la clave del dato que se desea obtener.
+Este metodo se encarga de buscar en el mapa de suscripciones si existe algun subcomponente que ofrezca dicho dato, y en
+caso de que exista, ejecuta el callback asociado a dicho dato, recupera el dato y lo devuelve. En caso de que no exista
+una suscripcion asociada a la clave, se lanza una excepcion.
+
+[//]: # (todo Añadir ejemplo de obtencion de datos)
+
