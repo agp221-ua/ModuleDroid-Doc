@@ -538,6 +538,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18a6 6 0 0 1-6-6c0-1 .25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 0 0 4 12a8 8 0 0 0 8 8v3l4-4-4-4m0-11V1L8 5l4 4V6a6 6 0 0 1 6 6c0 1-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0 0 20 12a8 8 0 0 0-8-8Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Activity Lifecycle
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -549,6 +562,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#suscripcion-a-eventos" class="md-nav__link">
+    Suscripcion a eventos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventos-disponibles" class="md-nav__link">
+    Eventos disponibles
+  </a>
+  
+    <nav class="md-nav" aria-label="Eventos disponibles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oncreate" class="md-nav__link">
+    onCreate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onstart" class="md-nav__link">
+    onStart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onresume" class="md-nav__link">
+    onResume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onpause" class="md-nav__link">
+    onPause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onstop" class="md-nav__link">
+    onStop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ondestroy" class="md-nav__link">
+    onDestroy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onactivitysaveinstancestate" class="md-nav__link">
+    onActivitySaveInstanceState
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1007,6 +1108,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#suscripcion-a-eventos" class="md-nav__link">
+    Suscripcion a eventos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventos-disponibles" class="md-nav__link">
+    Eventos disponibles
+  </a>
+  
+    <nav class="md-nav" aria-label="Eventos disponibles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oncreate" class="md-nav__link">
+    onCreate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onstart" class="md-nav__link">
+    onStart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onresume" class="md-nav__link">
+    onResume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onpause" class="md-nav__link">
+    onPause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onstop" class="md-nav__link">
+    onStop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ondestroy" class="md-nav__link">
+    onDestroy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onactivitysaveinstancestate" class="md-nav__link">
+    onActivitySaveInstanceState
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1021,9 +1199,48 @@
 
 
 <h1 id="activity-lifecycle">Activity Lifecycle</h1>
-<p>Este componente se encarga de gestionar el ciclo de vida de las activities, de forma que siguiendo
-una estructura de <abbr title="Sistema de gestion de eventos que permite a los modulos suscribirse a eventos, de forma que cuando ocurran, se ejecutara cierto codigo">suscripciones</abbr>, al ocurrir un <abbr title="Eventos que se producen en el ciclo de vida de una activity, como por ejemplo onCreate, onStart, onResume, onPause, onStop, onDestroy">evento de ciclo de vida</abbr>, se notifica
-a los modulos que esten suscritos a dicho evento.</p>
+<p>El subcomponente <code>Activity Lifecycle</code> corresponde a la seccion del kernel que se encarga de interceptar los eventos del
+ciclo de vida de las actividades de la aplicacion para realizar las acciones correspondientes. La finalidad de este es
+la de permitir que los otros subcomponentes y plugins de la aplicacion puedan reaccionar a los eventos del ciclo de vida
+de las activities para realizar diversas acciones.</p>
+<details class="example" open="open">
+<summary>Ejemplo</summary>
+<p>Pongamos como ejemplo el caso de un plugin que se encarga de la navegacion entre pantallas de la aplicacion. 
+Este plugin necesita saber cuando se crea una nueva activity para poder pasar los datos pertinentes a la nueva
+pantalla. Para ello podría suscribirse al evento <code>onCreate</code> del ciclo de vida de las activities y realizar las
+acciones correspondientes cuando este evento se produzca.</p>
+</details>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>Por el momento, el subcomponente <code>Activity Lifecycle</code> no es capaz de interceptar los eventos del ciclo de vida de
+fragmentos de manera oficial.</p>
+</details>
+<h2 id="suscripcion-a-eventos">Suscripcion a eventos</h2>
+<p>Como ya se ha comentado, el subcomponente <code>Activity Lifecycle</code> hace uso de un sistema de suscripcion a los eventos del
+ciclo de vida de las activities. Para ello, <code>Activity Lifecycle</code> expone una serie de metodos que permiten suscribirse a
+los eventos del ciclo de vida de las activities.</p>
+<p>Para conseguir esto, el subcomponente <code>Activity Lifecycle</code> intercepta los eventos haciendo uso de una Application personalizada
+que se encarga de registrar un <code>ActivityLifecycleCallbacks</code> en el <code>Application.ActivityLifecycleCallbacks</code> de la aplicacion.
+De esta manera, cuando se produzca un evento del ciclo de vida de una activity, antes de que se ejecute el metodo
+correspondiente de la activity, se ejecutaran todas las suscripciones a dicho evento que cumplan las restricciones 
+pertinentes (explicadas mas abajo).</p>
+<details class="warning" open="open">
+<summary>Alerta</summary>
+<p>Este componente hace uso de una <code>Application</code> personalizada. Si por algun motivo se necesita hacer uso de una
+Application propia, se debera tener en cuenta que el subcomponente <code>Activity Lifecycle</code> puede no funcionar
+correctamente. Para reducir las posibles incompatibilidades, deberá extender de la <code>Application</code> del subcomponente
+<code>Activity Lifecycle</code> y llamar al metodo <code>super</code> en el metodo <code>onCreate</code>. </p>
+</details>
+<h2 id="eventos-disponibles">Eventos disponibles</h2>
+<p><code>Activity Lifecycle</code> expone una serie de eventos que se corresponden con los eventos del ciclo de vida de las activities
+de Android. Estos eventos son los siguientes:</p>
+<h3 id="oncreate"><code>onCreate</code></h3>
+<h3 id="onstart"><code>onStart</code></h3>
+<h3 id="onresume"><code>onResume</code></h3>
+<h3 id="onpause"><code>onPause</code></h3>
+<h3 id="onstop"><code>onStop</code></h3>
+<h3 id="ondestroy"><code>onDestroy</code></h3>
+<h3 id="onactivitysaveinstancestate"><code>onActivitySaveInstanceState</code></h3>
 
 
 
