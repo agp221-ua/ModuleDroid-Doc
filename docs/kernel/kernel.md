@@ -105,71 +105,71 @@ A continuación detallamos los componentes que componen el kernel:
 
 - title: Activity Lifecycle
   content: Gestor de eventos suscritos a los ciclos de vida de las activities
-  url: ../components/activity_lifecycle/
+  url: ../components/subcomponents/activity_lifecycle/
 
 - title: Bluetooth Manager
   content: Gestor de eventos relacionados con el bluetooth
-  url: ../components/bluetooth_manager/
+  url: ../components/subcomponents/bluetooth_manager/
 
 - title: Current Context Manager
   content: Gestor de eventos y recursos relacionados con el contexto actual
-  url: ../components/current_context_manager/
+  url: ../components/subcomponents/current_context_manager/
 
 - title: Device Info Manager
   content: Gestor de eventos y recursos relacionados con la informacion del dispositivo
-  url: ../components/device_info_manager/
+  url: ../components/subcomponents/device_info_manager/
 
 - title: File Manager
   content: Gestor de eventos y recursos relacionados con el sistema de archivos
-  url: ../components/file_manager/
+  url: ../components/subcomponents/file_manager/
 
 - title: Intent Manager
   content: Gestor de eventos relacionados con los intents
-  url: ../components/intent_manager/
+  url: ../components/subcomponents/intent_manager/
 
 - title: Kernel Configurator
   content: Gestor de eventos relacionados con la configuracion del kernel
-  url: ../components/kernel_configurator/
+  url: ../components/subcomponents/kernel_configurator/
 
-- title: Localizacion Manager
-  content: Gestor de eventos relacionados con la localizacion
-  url: ../components/localizacion_manager/
+- title: Localization Manager
+  content: Gestor de eventos relacionados con la localization
+  url: ../components/subcomponents/localization_manager/
 
 - title: Network Manager
   content: Gestor de eventos relacionados con la red
-  url: ../components/network_manager/
+  url: ../components/subcomponents/network_manager/
 
 - title: Notification Manager
   content: Gestor de eventos relacionados con las notificaciones
-  url: ../components/notification_manager/
+  url: ../components/subcomponents/notification_manager/
 
 - title: Permission Manager
   content: Gestor de eventos relacionados con los permisos
-  url: ../components/permission_manager/
+  url: ../components/subcomponents/permission_manager/
 
 - title: Preferences Manager
   content: Gestor de eventos relacionados con las preferencias
-  url: ../components/preferences_manager/
+  url: ../components/subcomponents/preferences_manager/
 
 - title: Sensor Manager
   content: Gestor de eventos relacionados con los sensores
-  url: ../components/sensor_manager/
+  url: ../components/subcomponents/sensor_manager/
 
 - title: Speech Manager
   content: Gestor de eventos relacionados con el reconocimiento de voz y lectura de texto
-  url: ../components/speech_manager/
+  url: ../components/subcomponents/speech_manager/
 
 - title: Task Scheduler
   content: Gestor de eventos relacionados con la planificacion de tareas
-  url: ../components/task_scheduler/
+  url: ../components/subcomponents/task_scheduler/
 
 - title: Theme Manager
   content: Gestor de eventos relacionados con los temas
-  url: ../components/theme_manager/
+  url: ../components/subcomponents/theme_manager/
 
 - title: Thread Manager
   content: Gestor de eventos relacionados con los hilos
-  url: ../components/thread_manager/
+  url: ../components/subcomponents/thread_manager/
 
 ::/cards::
 
