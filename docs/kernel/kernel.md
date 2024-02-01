@@ -90,30 +90,87 @@ A continuación detallamos los componentes que componen el kernel:
 ::cards:: cols=2
 
 - title: Facade
-  content: Componente encargado de gestionar las llamadas de los modulos
+  content: Gestor de llamadas a los subcomponentes desde los plugins
   url: ../components/facade_kernel/
   
 - title: Internal Bus
-  content: Componente encargado de la comunicacion entre los subcomponentes del kernel
+  content: Gestor de la comunicacion entre los subcomponentes del kernel
   url: ../components/internal_bus/
-  
-- title: Current Context Manager
-  content: Subcomponente encargado de gestionar el contexto actual de la aplicacion
-  url: ../components/secondary%20components/current_context_manager/  
-
-- title: Activity Lifecycle
-  content: Subcomponente encargado de gestionar el ciclo de vida de las activities
-  url: ../components/secondary%20components/activity_lifecycle/ 
-
-- title: Kernel Configurator
-  content: Subcomponente encargado de gestionar la configuracion del kernel
-  url: ../components/secondary%20components/kernel_configurator/
 
 ::/cards::
 
-[//]: # (- title: :material-guy-fawkes-mask: Facade)
-[//]: # (- title: :material-chip: Internal Bus)
-[//]: # (- title: :material-nut: Current Context Manager)
-[//]: # (- title: :material-sync: Activity Lifecycle)
-[//]: # (- title: :material-wrench-cog: Kernel Configurator)
+---
+
+::cards:: cols=2
+
+- title: Activity Lifecycle
+  content: Gestor de eventos suscritos a los ciclos de vida de las activities
+  url: ../components/activity_lifecycle/
+
+- title: Bluetooth Manager
+  content: Gestor de eventos relacionados con el bluetooth
+  url: ../components/bluetooth_manager/
+
+- title: Current Context Manager
+  content: Gestor de eventos y recursos relacionados con el contexto actual
+  url: ../components/current_context_manager/
+
+- title: Device Info Manager
+  content: Gestor de eventos y recursos relacionados con la informacion del dispositivo
+  url: ../components/device_info_manager/
+
+- title: File Manager
+  content: Gestor de eventos y recursos relacionados con el sistema de archivos
+  url: ../components/file_manager/
+
+- title: Intent Manager
+  content: Gestor de eventos relacionados con los intents
+  url: ../components/intent_manager/
+
+- title: Kernel Configurator
+  content: Gestor de eventos relacionados con la configuracion del kernel
+  url: ../components/kernel_configurator/
+
+- title: Localizacion Manager
+  content: Gestor de eventos relacionados con la localizacion
+  url: ../components/localizacion_manager/
+
+- title: Network Manager
+  content: Gestor de eventos relacionados con la red
+  url: ../components/network_manager/
+
+- title: Notification Manager
+  content: Gestor de eventos relacionados con las notificaciones
+  url: ../components/notification_manager/
+
+- title: Permission Manager
+  content: Gestor de eventos relacionados con los permisos
+  url: ../components/permission_manager/
+
+- title: Preferences Manager
+  content: Gestor de eventos relacionados con las preferencias
+  url: ../components/preferences_manager/
+
+- title: Sensor Manager
+  content: Gestor de eventos relacionados con los sensores
+  url: ../components/sensor_manager/
+
+- title: Speech Manager
+  content: Gestor de eventos relacionados con el reconocimiento de voz y lectura de texto
+  url: ../components/speech_manager/
+
+- title: Task Scheduler
+  content: Gestor de eventos relacionados con la planificacion de tareas
+  url: ../components/task_scheduler/
+
+- title: Theme Manager
+  content: Gestor de eventos relacionados con los temas
+  url: ../components/theme_manager/
+
+- title: Thread Manager
+  content: Gestor de eventos relacionados con los hilos
+  url: ../components/thread_manager/
+
+::/cards::
+
 [//]: # (todo añadir los componentes del kernel)

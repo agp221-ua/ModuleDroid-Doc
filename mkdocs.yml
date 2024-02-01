@@ -45,7 +45,6 @@ nav:
       - Internal Bus: kernel/components/internal_bus.md
       - Subcomponents:
         - Activity Lifecycle: kernel/components/subcomponents/activity_lifecycle.md
-        - Block Manager: kernel/components/subcomponents/block_manager.md
         - Bluetooth Manager: kernel/components/subcomponents/bluetooth_manager.md
         - Current Context Manager: kernel/components/subcomponents/current_context_manager.md
         - Device Info Manager: kernel/components/subcomponents/device_info_manager.md
