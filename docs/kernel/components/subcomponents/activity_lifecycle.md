@@ -48,9 +48,6 @@ pertinentes (explicadas mas abajo).
 de Android. Estos eventos son los siguientes:
 
 ### `onCreate`
-
-
-
 ### `onStart`
 ### `onResume`
 ### `onPause`
