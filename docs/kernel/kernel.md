@@ -119,10 +119,6 @@ A continuación detallamos los componentes que componen el kernel:
   content: Gestor de eventos y recursos relacionados con la informacion del dispositivo
   url: ../components/subcomponents/device_info_manager/
 
-- title: File Manager
-  content: Gestor de eventos y recursos relacionados con el sistema de archivos
-  url: ../components/subcomponents/file_manager/
-
 - title: Intent Manager
   content: Gestor de eventos relacionados con los intents
   url: ../components/subcomponents/intent_manager/

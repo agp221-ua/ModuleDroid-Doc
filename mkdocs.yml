@@ -48,7 +48,6 @@ nav:
         - Bluetooth Manager: kernel/components/subcomponents/bluetooth_manager.md
         - Current Context Manager: kernel/components/subcomponents/current_context_manager.md
         - Device Info Manager: kernel/components/subcomponents/device_info_manager.md
-        - File Manager: kernel/components/subcomponents/file_manager.md
         - Intent Manager: kernel/components/subcomponents/intent_manager.md
         - Kernel Configurator: kernel/components/subcomponents/kernel_configurator.md
         - Localization Manager: kernel/components/subcomponents/localization_manager.md
