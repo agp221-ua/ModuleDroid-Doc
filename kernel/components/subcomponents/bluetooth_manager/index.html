@@ -560,6 +560,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.88 16.29 13 18.17v-3.76m0-8.58 1.88 1.88L13 9.58m4.71-1.87L12 2h-1v7.58L6.41 5 5 6.41 10.59 12 5 17.58 6.41 19 11 14.41V22h1l5.71-5.71-4.3-4.29 4.3-4.29Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Bluetooth Manager
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -571,6 +584,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-eventos" class="md-nav__link">
+    Gestion de eventos
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion de eventos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deteccion-de-dispositivos" class="md-nav__link">
+    Detección de dispositivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-de-dispositivos" class="md-nav__link">
+    Conexión de dispositivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desconexion-de-dispositivos" class="md-nav__link">
+    Desconexión de dispositivos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectura-y-escritura-de-datos" class="md-nav__link">
+    Lectura y escritura de datos
+  </a>
+  
+    <nav class="md-nav" aria-label="Lectura y escritura de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lectura-de-datos" class="md-nav__link">
+    Lectura de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escritura-de-datos" class="md-nav__link">
+    Escritura de datos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1007,6 +1100,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-eventos" class="md-nav__link">
+    Gestion de eventos
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion de eventos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deteccion-de-dispositivos" class="md-nav__link">
+    Detección de dispositivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-de-dispositivos" class="md-nav__link">
+    Conexión de dispositivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desconexion-de-dispositivos" class="md-nav__link">
+    Desconexión de dispositivos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectura-y-escritura-de-datos" class="md-nav__link">
+    Lectura y escritura de datos
+  </a>
+  
+    <nav class="md-nav" aria-label="Lectura y escritura de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lectura-de-datos" class="md-nav__link">
+    Lectura de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escritura-de-datos" class="md-nav__link">
+    Escritura de datos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1021,6 +1183,19 @@
 
 
 <h1 id="bluetooth-manager">Bluetooth Manager</h1>
+<p>El subcomponente <code>Bluetooth Manager</code> es responsable de la gestión de la conectividad Bluetooth, es decir, se encarga
+de gestionar los diferentes eventos relacionados con la conectividad Bluetooth, como la detección de dispositivos,
+la conexión y desconexión de dispositivos, la lectura y escritura de datos, etc.</p>
+<h2 id="gestion-de-eventos">Gestion de eventos</h2>
+<p>El subcomponente gestiona los siguientes eventos:</p>
+<h3 id="deteccion-de-dispositivos">Detección de dispositivos</h3>
+<h3 id="conexion-de-dispositivos">Conexión de dispositivos</h3>
+<h3 id="desconexion-de-dispositivos">Desconexión de dispositivos</h3>
+<h2 id="lectura-y-escritura-de-datos">Lectura y escritura de datos</h2>
+<p>El subcomponente también es responsable de la lectura y escritura de datos a través de la conexión Bluetooth. Se facilita
+una interfaz para la lectura y escritura de datos, tanto como String, como en tipos primitivos o binarios.</p>
+<h3 id="lectura-de-datos">Lectura de datos</h3>
+<h3 id="escritura-de-datos">Escritura de datos</h3>
 
 
 
