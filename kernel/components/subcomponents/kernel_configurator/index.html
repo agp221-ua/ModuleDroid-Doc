@@ -617,28 +617,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../file_manager/" class="md-nav__link">
-        
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Z"/></svg>
-  
-  <span class="md-ellipsis">
-    File Manager
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../intent_manager/" class="md-nav__link">
         
   
@@ -1021,6 +999,10 @@
 
 
 <h1 id="kernel-configurator">Kernel Configurator</h1>
+<p>The <code>KernelConfigurator</code> is a subcomponent responsible for configuring the microkernel and its components in the application.
+All the configurations are done by this subcomponent. It prepares all the configurations preset in each component
+and also registers all the plugins, initializes them and sets the pertinent configurations. That is the first component
+initialized, and it allows to realize certain actions before and after the initialization of the microkernel.</p>
 
 
 
