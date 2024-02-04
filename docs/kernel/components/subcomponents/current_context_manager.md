@@ -22,8 +22,11 @@ dependen de este.
     casos mas especificos en los que se requiera un control mas preciso del contexto. Se detalla más a fondo posteriormente
     en esta pagina.
 
+## Recursos
 
-
+El subcomponente `Current Context Manager` ofrece una forma sencilla y directa de conseguir recursos mediante el uso de
+identificadores. Estos identificadores son los que se definen en los archivos XML de recursos de la aplicacion. Facilita
+tanto la obtencion de colores (no dependientes del tema), como de cadenas de texto, dimensiones, estilos, etc.
 
 [//]: # (todo introduccion del manejador de contexto)
 
