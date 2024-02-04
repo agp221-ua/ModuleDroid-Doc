@@ -131,10 +131,6 @@ A continuación detallamos los componentes que componen el kernel:
   content: Gestor de eventos relacionados con la localization
   url: ../components/subcomponents/localization_manager/
 
-- title: Network Manager
-  content: Gestor de eventos relacionados con la red
-  url: ../components/subcomponents/network_manager/
-
 - title: Notification Manager
   content: Gestor de eventos relacionados con las notificaciones
   url: ../components/subcomponents/notification_manager/

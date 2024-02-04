@@ -51,7 +51,6 @@ nav:
         - Intent Manager: kernel/components/subcomponents/intent_manager.md
         - Kernel Configurator: kernel/components/subcomponents/kernel_configurator.md
         - Localization Manager: kernel/components/subcomponents/localization_manager.md
-        - Network Manager: kernel/components/subcomponents/network_manager.md
         - Notification Manager: kernel/components/subcomponents/notification_manager.md
         - Permission Manager: kernel/components/subcomponents/permission_manager.md
         - Preferences Manager: kernel/components/subcomponents/preferences_manager.md
