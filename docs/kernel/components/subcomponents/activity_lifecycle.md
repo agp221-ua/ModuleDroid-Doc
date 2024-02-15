@@ -53,7 +53,6 @@ de Android. Estos eventos son los siguientes:
 ### `onPause`
 ### `onStop`
 ### `onDestroy`
-### `onRestart`
 ### `onActivitySaveInstanceState`
 
 
