@@ -35,7 +35,7 @@ pertinentes (explicadas mas abajo).
     Este componente hace uso de una `Application` personalizada. Si por algun motivo se necesita hacer uso de una
     Application propia, se debera tener en cuenta que el subcomponente `Activity Lifecycle` puede no funcionar
     correctamente. Para reducir las posibles incompatibilidades, deberá extender de la `Application` del subcomponente
-    `Activity Lifecycle` y llamar al metodo `super` en el metodo `onCreate`. 
+    `Kernel Configurator` y llamar al metodo `super` en el metodo `onCreate`. 
 
 [//]: # (todo explicar con ejemplos el codigo para suscribirse)
 
