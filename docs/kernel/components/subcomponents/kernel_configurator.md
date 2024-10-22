@@ -3,7 +3,7 @@ icon: material/wrench-cog
 ---
 
 # Kernel Configurator
-
+ 
 The `KernelConfigurator` is a subcomponent responsible for configuring the microkernel and its components in the application.
 All the configurations are done by this subcomponent. It prepares all the configurations preset in each component
 and also registers all the plugins, initializes them and sets the pertinent configurations. That is the first component

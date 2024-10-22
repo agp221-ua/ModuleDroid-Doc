@@ -2,25 +2,26 @@
 icon: material/guy-fawkes-mask
 ---
 
-# Kernel Facade
+# Facade
 
-El Kernel Facade es el componente que se encarga de gestionar las llamadas de los modulos
-al kernel, y de gestionar las respuestas del kernel a los modulos. Basicamente es un
-intermediario entre los modulos y el kernel, que se encarga de que la comunicacion entre
-ambos sea correcta y lo mas sencilla posible de cara a los modulos y el usuario final.
+The Kernel Facade is the component responsible for managing the communication between modules and the kernel, as well as
+handling the kernel's responses to the modules. Essentially, it acts as an intermediary between the modules and the
+kernel, ensuring that communication is smooth and as simple as possible for both the modules and the end user.
 
-## Funcionamiento
+## Functionality
 
-El funcionamiento del Kernel Facade es muy sencillo. Basicamente se encarga de gestionar
-las llamadas de los modulos a los componentes del kernel y viceversa, de forma que los
-modulos no tengan que preocuparse de saber como se comunican con el kernel. Para ello,
-el Kernel Facade expone una serie de metodos que los modulos pueden utilizar para
-comunicarse con los componentes internos, ya que la principal funcion del Kernel Facade es la de
-abstraer a los modulos de la complejidad de la comunicacion con los componentes del kernel y 
-evitar la necesidad de saber y depender de como funciona internamente el framework.
+The operation of the Kernel Facade is straightforward. It handles the communication between modules and kernel
+components, and vice versa, so that the modules do not need to worry about how they interact with the kernel. To achieve
+this, the Kernel Facade exposes a set of methods that the modules can use to communicate with the internal components.
+The primary function of the Kernel Facade is to abstract the complexity of kernel communication from the modules,
+allowing them to avoid needing to understand or depend on the internal workings of the framework.
 
-## Estructura
+## Structure
 
+!!! info   
+    The Kernel Facade is composed of a set of subfacades, each responsible for managing communication with specific internal
+    kernel components. This subdivision exists because the Kernel Facade is a highly complex component, and splitting it
+    into subfacades helps improve its comprehensibility and maintainability.
 
 ```mermaid
     flowchart TB
@@ -56,11 +57,3 @@ evitar la necesidad de saber y depender de como funciona internamente el framewo
         
 ```
 
-!!! info   
-    Se puede observar que el Kernel Facade esta compuesto por un conjunto de subfacade, los cuales
-    se encargan de gestionar las llamadas a los componentes internos del kernel. Esta subdivision se debe
-    a que el Kernel Facade es un componente muy complejo, por lo que se ha decidido dividirlo en
-    subfacade para facilitar su comprension y mantenimiento.
-
-
-[//]: # (todo seguir con la estructura del facade)

@@ -4,62 +4,98 @@ icon: material/sync
 
 # Activity Lifecycle
 
-El subcomponente `Activity Lifecycle` corresponde a la seccion del kernel que se encarga de interceptar los eventos del
-ciclo de vida de las actividades de la aplicacion para realizar las acciones correspondientes. La finalidad de este es
-la de permitir que los otros subcomponentes y plugins de la aplicacion puedan reaccionar a los eventos del ciclo de vida
-de las activities para realizar diversas acciones.
+The `Activity Lifecycle` subcomponent is a part of the kernel responsible for intercepting the lifecycle events of the
+application's activities to execute corresponding actions. Its purpose is to allow other subcomponents and application
+plugins to react to these activity lifecycle events to perform various actions.
 
-???+ example "Ejemplo"
-    Pongamos como ejemplo el caso de un plugin que se encarga de la navegacion entre pantallas de la aplicacion. 
-    Este plugin necesita saber cuando se crea una nueva activity para poder pasar los datos pertinentes a la nueva
-    pantalla. Para ello podría suscribirse al evento `onCreate` del ciclo de vida de las activities y realizar las
-    acciones correspondientes cuando este evento se produzca.
+???+ example
+    For instance, consider a plugin that manages navigation between screens in the application. This plugin needs to know
+    when a new activity is created to pass relevant data to the new screen. To achieve this, it could subscribe to the
+    `onCreate` event in the activity lifecycle and execute the necessary actions when this event occurs.
 
 ???+ info
-    Por el momento, el subcomponente `Activity Lifecycle` no es capaz de interceptar los eventos del ciclo de vida de
-    fragmentos de manera oficial.
+    Currently, the `Activity Lifecycle` subcomponent does not officially support intercepting fragment lifecycle events.
 
-## Suscripcion a eventos
+## Retrieving Activities
 
-Como ya se ha comentado, el subcomponente `Activity Lifecycle` hace uso de un sistema de suscripcion a los eventos del
-ciclo de vida de las activities. Para ello, `Activity Lifecycle` expone una serie de metodos que permiten suscribirse a
-los eventos del ciclo de vida de las activities.
+???+ warning
+    The reference to these Activities can change at any time, so it is recommended not to store the reference but to call
+    the method when needed. Another option is to create a computed property where the getter calls the desired method.
 
-Para conseguir esto, el subcomponente `Activity Lifecycle` intercepta los eventos haciendo uso de una Application personalizada
-que se encarga de registrar un `ActivityLifecycleCallbacks` en el `Application.ActivityLifecycleCallbacks` de la aplicacion.
-De esta manera, cuando se produzca un evento del ciclo de vida de una activity, antes de que se ejecute el metodo
-correspondiente de la activity, se ejecutaran todas las suscripciones a dicho evento que cumplan las restricciones 
-pertinentes (explicadas mas abajo).
+To retrieve Activities, the Facade provides different options depending on the situation:
 
-???+ warning "Alerta"
-    Este componente hace uso de una `Application` personalizada. Si por algun motivo se necesita hacer uso de una
-    Application propia, se debera tener en cuenta que el subcomponente `Activity Lifecycle` puede no funcionar
-    correctamente. Para reducir las posibles incompatibilidades, deberá extender de la `Application` del subcomponente
-    `Kernel Configurator` y llamar al metodo `super` en el metodo `onCreate`. 
+| Method             | Description                                                                                                                                                                                           |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Current Activity   | Returns the activity that is currently resumed.                                                                                                                                                       |
+| Resuming Activity  | Returns the activity that is currently resuming.                                                                                                                                                      |
+| Starting Activity  | Returns the activity that is currently starting.                                                                                                                                                      |
+| Creating Activity  | Returns the activity that is currently being created.                                                                                                                                                 |
+| Preferred Activity | Returns the activity in the order `resuming` > `starting` > `creating` > `current`. This is offered as a simplified solution to access the activity during uncertain times when the state is unknown. |
 
-[//]: # (todo explicar con ejemplos el codigo para suscribirse)
+Alternatively, there are two methods to retrieve the desired activity: one that returns a nullable value (Activity?) and
+another that returns a non-nullable value (Activity), which will throw an `IllegalStateException` if the desired
+activity is not found.
 
-[//]: # (tal vez dar la opcion de no especificar una activity para que por defecto tome todas las activities)
-[//]: # (y si no, que tome que solo pasara con las que extiendan cierta clase y/o tengan cierta id)
+???+ example
+    For example, let's assume we want to obtain the current activity of the application from a code where
+    direct access to the activity is not available.
 
-## Eventos disponibles
+    ```kotlin
+    // Optional way
+    val currentActivity = Facade.getCurrentActivity() ?: // Handle case where no activity is found
 
-`Activity Lifecycle` expone una serie de eventos que se corresponden con los eventos del ciclo de vida de las activities
-de Android. Estos eventos son los siguientes:
+    // Exception way
+    try {
+        val currentActivity = Facade.getCurrentActivityOrFail()
+    } catch (e: IllegalStateException) {
+        // Handle case where no activity is found
+    }
 
-### `onCreate`
-### `onStart`
-### `onResume`
-### `onPause`
-### `onStop`
-### `onDestroy`
-### `onRestart`
-### `onActivitySaveInstanceState`
+    // Property way
+    val currentActivity: Activity?
+        get() {
+            return Facade.getCurrentActivity()
+        }
+    //...
+    this.currentActivity // Access the current activity
+    ```
 
+## Event Subscription
 
+As mentioned earlier, the `Activity Lifecycle` subcomponent uses a subscription system for activity lifecycle events.
+The `Activity Lifecycle` provides a set of methods that allow subscribing to these events.
 
+To achieve this, the `Activity Lifecycle` subcomponent intercepts lifecycle events. When an activity lifecycle event
+occurs, before the corresponding activity method is executed, all subscriptions to that event that meet the relevant
+conditions are executed.
 
+The available events for subscription are: `onPreCreate`, `onCreate`, `onPostCreate`, `onPreStart`, `onStart`,
+`onPostStart`, `onPreResume`, `onResume`, `onPostResume`, `onPrePause`, `onPause`, `onPostPause`, `onPreStop`, `onStop`,
+`onPostStop`, `onPreDestroy`, `onDestroy`, `onPostDestroy`, `onRestart`, `onSaveInstanceState`.
 
-[//]: # (todo ampliar introduccion del activity lifecycle)
+Additionally, all of these events offer different subscription method versions, adapting to the specific case as needed
+based on certain conditions:
 
-[//]: # (todo seguir con la estructura del activity lifecycle)
+| Method call parameters                    | Description                                                                                                                               |
+|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `subscription`                            | This call simply adds the subscription, which will be executed when the event is captured.                                                |
+| `id`<br>`subscription`                    | This call only executes the subscription when the id of the current activity matches `id`.                                                |
+| `activityClass`<br>`subscription`         | This call only executes the subscription when the class of the current activity matches `activityClass`.                                  |
+| `id`<br>`activityClass`<br>`subscription` | This call only executes the subscription when both the id and class of the current activity match `id` and `activityClass`, respectively. |
+
+???+ example
+    Suppose we want to subscribe to the `onCreate` event of a specific activity. We could use the following call:
+
+    ```kotlin
+    Facade.addOnCreateSubscription { activity, bundle ->
+        // Execute actions when MyActivity is created
+    }
+    ```
+
+    Now, imagine we want to subscribe to the `onStart` event of the activity with id `myActivityId`:
+
+    ```kotlin
+    Facade.addOnStartSubscription(myActivityId) { activity ->
+        // Execute actions when MyActivity is started
+    }
+    ```

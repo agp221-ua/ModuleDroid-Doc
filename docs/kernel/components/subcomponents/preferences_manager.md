@@ -1,7 +1,7 @@
 ---
 icon: material/card-bulleted
 ---
-
+ 
 # Preferences Manager
 
 El subcomponente `Preferences Manager` es responsable de la gestión de las preferencias de la aplicación. Este
