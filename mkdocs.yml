@@ -44,9 +44,9 @@ nav:
       - Facade: kernel/components/facade_kernel.md
       - Internal Bus: kernel/components/internal_bus.md
       - Subcomponents:
+        - Kernel Configurator: kernel/components/subcomponents/kernel_configurator.md
         - Activity Lifecycle: kernel/components/subcomponents/activity_lifecycle.md
         - Intent Manager: kernel/components/subcomponents/intent_manager.md
-        - Kernel Configurator: kernel/components/subcomponents/kernel_configurator.md
         - Preferences Manager: kernel/components/subcomponents/preferences_manager.md
   - Navigator: navigator.md
   - Configurator: configurator.md
