@@ -12,7 +12,7 @@
         <link rel="prev" href="../activity_lifecycle/">
       
       
-        <link rel="next" href="../kernel_configurator/">
+        <link rel="next" href="../preferences_manager/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -540,6 +540,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../kernel_configurator/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.94 17.94a3.253 3.253 0 0 0 0-.89l.97-.73a.22.22 0 0 0 .06-.29l-.92-1.56c-.05-.1-.19-.14-.29-.1l-1.15.45c-.24-.17-.49-.32-.78-.44l-.17-1.19a.235.235 0 0 0-.23-.19h-1.85c-.12 0-.22.08-.24.19l-.17 1.19c-.29.12-.54.27-.78.44l-1.15-.45c-.1-.04-.24 0-.28.1l-.93 1.56c-.06.1-.03.22.06.29l.97.73c-.01.15-.03.3-.03.45s.02.29.03.44l-.97.74a.22.22 0 0 0-.06.29l.93 1.56c.04.1.18.13.28.1l1.15-.46c.24.18.49.33.78.45l.17 1.19c.02.11.12.19.24.19h1.85c.11 0 .21-.08.23-.19l.17-1.19c.29-.12.54-.27.78-.45l1.15.46c.1.03.24 0 .29-.1l.92-1.56a.22.22 0 0 0-.06-.29l-.97-.74M16.5 19c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M9 2c1.8.6 3 2.3 3 4.2 0 2-1.2 3.7-3 4.3v11c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.6v-11c-1.8-.6-3-2.3-3-4.2S4.2 2.6 6 2v3.7h3V2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Kernel Configurator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../activity_lifecycle/" class="md-nav__link">
         
   
@@ -613,9 +636,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#peticion-de-intents" class="md-nav__link">
+  <a href="#launching-activities" class="md-nav__link">
     <span class="md-ellipsis">
-      Petición de intents
+      Launching Activities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activity-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activity Identifiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Identifiers
     </span>
   </a>
   
@@ -625,29 +666,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../kernel_configurator/" class="md-nav__link">
-        
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.94 17.94a3.253 3.253 0 0 0 0-.89l.97-.73a.22.22 0 0 0 .06-.29l-.92-1.56c-.05-.1-.19-.14-.29-.1l-1.15.45c-.24-.17-.49-.32-.78-.44l-.17-1.19a.235.235 0 0 0-.23-.19h-1.85c-.12 0-.22.08-.24.19l-.17 1.19c-.29.12-.54.27-.78.44l-1.15-.45c-.1-.04-.24 0-.28.1l-.93 1.56c-.06.1-.03.22.06.29l.97.73c-.01.15-.03.3-.03.45s.02.29.03.44l-.97.74a.22.22 0 0 0-.06.29l.93 1.56c.04.1.18.13.28.1l1.15-.46c.24.18.49.33.78.45l.17 1.19c.02.11.12.19.24.19h1.85c.11 0 .21-.08.23-.19l.17-1.19c.29-.12.54-.27.78-.45l1.15.46c.1.03.24 0 .29-.1l.92-1.56a.22.22 0 0 0-.06-.29l-.97-.74M16.5 19c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M9 2c1.8.6 3 2.3 3 4.2 0 2-1.2 3.7-3 4.3v11c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.6v-11c-1.8-.6-3-2.3-3-4.2S4.2 2.6 6 2v3.7h3V2Z"/></svg>
-  
-  <span class="md-ellipsis">
-    Kernel Configurator
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -786,9 +804,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#peticion-de-intents" class="md-nav__link">
+  <a href="#launching-activities" class="md-nav__link">
     <span class="md-ellipsis">
-      Petición de intents
+      Launching Activities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activity-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activity Identifiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Identifiers
     </span>
   </a>
   
@@ -810,13 +846,110 @@
 
 
 <h1 id="intent-manager">Intent Manager</h1>
-<p>El subcomponente <code>Intent Manager</code> corresponde a la sección del kernel que se encarga de interceptar los eventos 
-relacionados con los intents de la aplicación para realizar las acciones correspondientes. La finalidad de este es
-facilitar al cliente la gestión de los intents de la aplicación. Se centra en gestionar la peticion de intents, 
-centralizando la gestión de los mismos y facilitando la peticion de intents externos del sistema, como puede ser
-la apertura de la camara para realizar una foto.</p>
-<h2 id="peticion-de-intents">Petición de intents</h2>
-<p>El subcomponente expone una serie de métodos que permiten realizar peticiones de intents de manera sencilla.</p>
+<p>The <code>Intent Manager</code> subcomponent is responsible for the part of the kernel that intercepts events related to the 
+application's intents to execute the corresponding actions. Its main goal is to simplify intent management for the 
+client by centralizing the handling of application intents.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Currently, <code>Intent Manager</code> only supports <code>Intents</code> for launching Activities within the same application.</p>
+</details>
+<h2 id="launching-activities">Launching Activities</h2>
+<p>Two primary methods are provided for launching activities within the application:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><em>startActivity</em></strong></td>
+<td>Launches an activity within the application. It requires the destination activity's class as a mandatory parameter. Optionally, you can assign an ID to the destination activity and execute a pre-launch action through a lambda function, which provides parameters such as the intent used or the assigned ID (e.g., for cases where an ID is not specified). Additionally, the parent activity instance can be passed if you want to explicitly indicate the context from which it is created.</td>
+</tr>
+<tr>
+<td><strong><em>startActivityForResult</em></strong></td>
+<td>Launches an activity within the application and awaits a result. It requires the destination activity's class as a mandatory parameter. Optionally, you can assign an ID to the destination activity and execute a pre-launch action via a lambda function, which provides parameters such as the intent, the assigned ID (e.g., for cases where an ID is not specified), or a requestCode (if not provided, a generic one will be created). The parent activity can also be explicitly specified if needed.</td>
+</tr>
+</tbody>
+</table>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>For instance, let’s say we want to launch an activity of class <code>OtherActivity</code>.
+<div class="highlight"><pre><span></span><code><span class="n">Facade</span><span class="p">.</span><span class="na">startActivity</span><span class="p">(</span><span class="n">OtherActivity</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">)</span>
+</code></pre></div>
+Alternatively, if we want to launch the activity with a specific ID, we can do so as follows:
+<div class="highlight"><pre><span></span><code><span class="n">Facade</span><span class="p">.</span><span class="na">startActivity</span><span class="p">(</span><span class="n">OtherActivity</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;id&quot;</span><span class="p">)</span>
+</code></pre></div>
+Furthermore, if we want to perform a pre-launch action and specify the source activity, we can do it like this:
+<div class="highlight"><pre><span></span><code><span class="c1">// Assuming we are within an activity</span>
+<span class="n">Facade</span><span class="p">.</span><span class="na">startActivity</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">OtherActivity</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">intent</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">internalId</span><span class="w"> </span><span class="o">-&gt;</span>
+<span class="w">    </span><span class="n">intent</span><span class="p">.</span><span class="na">putExtra</span><span class="p">(</span><span class="s">&quot;key&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<h2 id="activity-identifiers">Activity Identifiers</h2>
+<p>To facilitate the identification of activities, <code>Intent Manager</code> assigns a unique identifier to each activity initiated 
+through its defined methods. This may result in activities without an identifier, so several methods are available to 
+provide an identifier to an activity if it lacks one, or to retrieve the identifier if it already has one:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><em>getId</em></strong></td>
+<td>Retrieves the identifier of the activity passed as a parameter.</td>
+</tr>
+<tr>
+<td><strong><em>provideId</em></strong></td>
+<td>Assigns an identifier to the activity passed as a parameter if it lacks one, and returns it. Note that if the activity already has an identifier, it will be overwritten.</td>
+</tr>
+<tr>
+<td><strong><em>getIdOrProvideOne</em></strong></td>
+<td>Retrieves the identifier of the activity passed as a parameter if it already has one, or assigns one if it lacks one, returning it in either case.</td>
+</tr>
+</tbody>
+</table>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>For instance, let’s say we want to obtain the identifier of an activity:
+<div class="highlight"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">activity</span><span class="p">:</span><span class="w"> </span><span class="n">Activity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Facade</span><span class="p">.</span><span class="na">getId</span><span class="p">(</span><span class="n">activity</span><span class="p">)</span>
+</code></pre></div>
+Alternatively, if we want to assign an identifier to an activity that does not yet have one:
+<div class="highlight"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Facade</span><span class="p">.</span><span class="na">provideId</span><span class="p">(</span><span class="n">activity</span><span class="p">)</span>
+</code></pre></div>
+On the other hand, if we want to retrieve the identifier of an activity if it already has one, or assign one if it 
+does not:
+<div class="highlight"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Facade</span><span class="p">.</span><span class="na">getIdOrProvideOne</span><span class="p">(</span><span class="n">OtherActivity</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>Among these methods, <code>getIdOrProvideOne</code> is the most recommended as it avoids constant checks and reduces the risk 
+of errors related to activity identification.</p>
+</details>
+<h2 id="internal-identifiers">Internal Identifiers</h2>
+<p>With the above method, potential issues arise, such as assigning duplicate identifiers to different activities. To avoid
+this, a unique internal identifier is maintained, allowing users to have activities with the same identifier while 
+internally assigning a unique identifier to each. This internal identifier can be retrieved through the <code>getInternalId</code> 
+method and cannot be assigned manually, as it is automatically assigned whenever an identifier is either manually or 
+automatically assigned.</p>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>For instance, let’s say we want to retrieve the internal identifier of an activity:
+<div class="highlight"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">activity</span><span class="p">:</span><span class="w"> </span><span class="n">Activity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="kd">val</span><span class="w"> </span><span class="nv">internalId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Facade</span><span class="p">.</span><span class="na">getInternalId</span><span class="p">(</span><span class="n">activity</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>Each time an activity’s identifier is overwritten, the internal identifier will also be updated.</p>
+</details>
 
 
 
@@ -866,13 +999,13 @@ la apertura de la camara para realizar una foto.</p>
         
         
           
-          <a href="../kernel_configurator/" class="md-footer__link md-footer__link--next" aria-label="Next: Kernel Configurator">
+          <a href="../preferences_manager/" class="md-footer__link md-footer__link--next" aria-label="Next: Preferences Manager">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Kernel Configurator
+                Preferences Manager
               </div>
             </div>
             <div class="md-footer__button md-icon">
